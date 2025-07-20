@@ -1,2 +1,4 @@
 # NexCent
-# Vercel Link:nex-cent-navy.vercel.app
+# demo
+
+![Uploading screencapture-localhost-3000-2025-07-20-13_40_09.png…]()
