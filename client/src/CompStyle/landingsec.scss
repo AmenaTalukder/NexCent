@@ -1,0 +1,202 @@
+$primary-color: #0ae315;
+$secondary-color: #6b7280;
+$background-gray: #f9fafb;
+$white: #ffffff;
+$dark-gray: #111827;
+$text-gray: #6b7280;
+$border-gray: #e5e7eb;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@mixin transition-smooth {
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.landing-page {
+  background-color: $background-gray;
+}
+
+// Hero Section
+.hero-section {
+  padding: 3rem 0;
+
+  .heroLand-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  .tesla-logo .logo-container {
+    width: 18rem;
+    height: 18rem;
+    background-color: $dark-gray;
+    border-radius: 0.75rem;
+    @include flex-center;
+
+    .tesla-icon {
+      width: 4rem;
+      fill: $white;
+    }
+  }
+
+  .content-section {
+    flex: 1;
+
+    .description {
+      font-size: 0.875rem;
+      color: $text-gray;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .stack-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: $primary-color;
+      margin-bottom: 0.5rem;
+    }
+
+    .stack-description {
+      font-size: 0.875rem;
+      color: $text-gray;
+      margin-bottom: 1rem;
+    }
+
+    .partner-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+
+      .landing-logo {
+        width: 30px;
+        height: auto;
+      }
+
+      .more-link {
+        font-size: 0.875rem;
+        color: $primary-color;
+        cursor: pointer;
+        margin-left: auto;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Features Section
+.features-section {
+  background-color: $white;
+  padding: 4rem 0;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    .section-title {
+      font-size: 1.75rem;
+      color: $dark-gray;
+      font-weight: bold;
+    }
+
+    .section-subtitle {
+      font-size: 0.875rem;
+      color: $text-gray;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .features-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .feature-card {
+    background-color: $white;
+    border: 1px solid $border-gray;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    @include card-shadow;
+    @include transition-smooth;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-image {
+      height: 12rem;
+      @include flex-center;
+
+      &.blue {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      }
+
+      &.yellow {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      }
+
+      &.green {
+        background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+      }
+
+      .icon-container {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: inherit;
+        }
+      }
+    }
+
+    .card-content {
+      padding: 1.5rem;
+
+      h3 {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: $dark-gray;
+        line-height: 1.4;
+        margin-bottom: 0.75rem;
+      }
+
+      .card-link {
+        font-size: 0.875rem;
+        color: $primary-color;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
