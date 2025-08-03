@@ -1,0 +1,86 @@
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f9fafb;
+
+  .hero-content {
+    max-width: 50%;
+    margin-left: 250px;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #333;
+
+      span {
+        color: #28a745;
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      color: #777;
+      font-size: 1rem;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(to right, #0ae315, #66bb6a);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+
+      &:hover {
+        background: linear-gradient(to right, #388e3c, #4caf50);
+        transform: scale(1.03);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  .hero-image {
+    max-width: 65%;
+    margin-right: 200px;
+
+    img {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+
+    .hero-content,
+    .hero-image {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .hero-image {
+      margin-top: 2rem;
+    }
+
+    .hero-content {
+      margin-left: 0;
+    }
+    button {
+      margin-left: 40%;
+    }
+  }
+}

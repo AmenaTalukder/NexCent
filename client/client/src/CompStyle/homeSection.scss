@@ -1,0 +1,78 @@
+.home-section {
+  padding: 2rem;
+  font-family: sans-serif;
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    margin-left: 30px;
+
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 1.5rem;
+      width: 30%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      text-align: center;
+      .logo {
+        font-size: 30px;
+      }
+
+      h3 {
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: #777;
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  .highlight-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 100px;
+
+    .illustration {
+      flex: 1;
+
+      .mock-illustration {
+        width: 90%;
+        height: auto;
+      }
+    }
+
+    .content {
+      flex: 2;
+      margin-top: 30px;
+
+      h2 {
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: #555;
+        margin-bottom: 1.5rem;
+      }
+
+      button {
+        background: #34c759;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+          background: #28a745;
+        }
+      }
+    }
+  }
+}
